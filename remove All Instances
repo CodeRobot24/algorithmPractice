@@ -3,7 +3,7 @@ public String removeAllInstances(String modify, String removeable){
             return modify;
         }
         else{
-            String firstHalf = modify.substring(0, sequence.indexOf(removeable));
+            String firstHalf = modify.substring(0, modify.indexOf(removeable));
             String secondHalf = modify.substring(firstHalf.length() + removeable.length());
             modify = firstHalf + secondHalf;
                 if(modify.indexOf(removeable) == -1){
