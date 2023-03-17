@@ -1,0 +1,18 @@
+public String removeAllInstances(String modify, String removeable){
+        if(modify.indexOf(removeable) == -1){
+            return modify;
+            //return removeFirstWhiteSpaces(sequence);
+        }
+        else{
+            String firstHalf = modify.substring(0, sequence.indexOf(removeable));
+            String secondHalf = modify.substring(firstHalf.length() + removeable.length());
+            modify = firstHalf + secondHalf;
+                if(modify.indexOf(removeable) == -1){
+                    return modify;
+                    //return removeFirstWhiteSpaces(sequence);
+                }
+                else{
+                    return this.removeAllInstances(modify, removeable);
+                }
+        }
+    }
